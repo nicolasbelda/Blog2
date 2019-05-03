@@ -11,24 +11,9 @@ export class PostListComponent implements OnInit {
 	@Input() postContent : string;
   @Input() postLikes : number;
 
-  lastUpdate = new Promise((resolve, reject) => {
-    const date = new Date();
-    setTimeout(
-      () => {
-        resolve(date);
-      }, 2000
-    );
-  });
+  lastUpdate = new Date();
 
 
-  constructor() { 
-    setTimeout(
-      ()=>{
-        this.isAuth = true;
-      }, 4000
-
-    );
-  }
 
   ngOnInit() {
   }

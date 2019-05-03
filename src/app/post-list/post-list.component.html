@@ -3,7 +3,7 @@
 				'list-group-item-danger': postLikes < 0}">
 
   <h1> {{postTitle}} </h1>
-  <p class="date"> {{lastUpdate | async | date: 'short' | uppercase}}</p>
+  <p class="date"> {{lastUpdate | date: 'short' | uppercase}}</p>
   <h4 [ngStyle]="{color: getColor()}">{{getContent()}}</h4>
   <button class="btn btn-success"
               (click)="onIncrement()" >Love it!</button>
