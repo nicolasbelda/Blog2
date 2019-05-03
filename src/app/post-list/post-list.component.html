@@ -1,0 +1,13 @@
+<li [ngClass]="{'list-group-item': true, 
+				'list-group-item-success': postLikes > 0,
+				'list-group-item-danger': postLikes < 0}">
+
+  <h1> {{postTitle}} </h1>
+  <p class="date"> {{lastUpdate | async | date: 'short' | uppercase}}</p>
+  <h4 [ngStyle]="{color: getColor()}">{{getContent()}}</h4>
+  <button class="btn btn-success"
+              (click)="onIncrement()" >Love it!</button>
+             likes : {{postLikes}}
+  <button class="btn btn-danger"
+              (click)="onDecrement()">Don't love it!</button>         
+</li>
