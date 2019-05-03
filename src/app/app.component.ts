@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isAuth = false;
 
- const lastUpdate = new Date();
-  
 
   likes = 0;
   posts = [
